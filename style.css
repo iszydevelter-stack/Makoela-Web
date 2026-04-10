@@ -63,7 +63,14 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  padding: 0.5rem 0 2rem;
+  padding: 0.85rem 1.1rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(31, 26, 23, 0.08);
+  border-radius: 999px;
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 1rem;
+  z-index: 20;
 }
 
 .logo {
@@ -89,8 +96,8 @@ a {
 
 .hero-content {
   width: min(820px, calc(100% - 2rem));
-  margin: auto auto;
-  text-align: left;
+  margin: auto;
+  text-align: center;
 }
 
 .eyebrow,
@@ -114,16 +121,19 @@ a {
   max-width: 720px;
   font-size: 1.08rem;
   color: var(--muted);
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
 }
 
 .hero-buttons {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.btn {
+.btn,
+.btn-primary,
+.btn-secondary {
   display: inline-block;
   padding: 0.95rem 1.4rem;
   border-radius: 999px;
@@ -133,12 +143,14 @@ a {
   cursor: pointer;
 }
 
-.btn-primary {
+.btn-primary,
+.btn {
   background: var(--accent);
   color: var(--white);
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn:hover {
   background: var(--accent-dark);
 }
 
@@ -182,7 +194,8 @@ a {
 
 .grid-two,
 .weekend-grid,
-.info-grid {
+.info-grid,
+.contact-box {
   display: grid;
   gap: 1.5rem;
 }
@@ -197,6 +210,11 @@ a {
 
 .info-grid {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.contact-box {
+  grid-template-columns: 1.1fr 1fr;
+  align-items: start;
 }
 
 .card {
@@ -243,13 +261,6 @@ a {
   background: var(--dark-soft);
   border-color: rgba(255, 255, 255, 0.08);
   box-shadow: none;
-}
-
-.contact-box {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 2rem;
-  align-items: start;
 }
 
 .contact-name {
@@ -327,8 +338,11 @@ a {
     align-items: stretch;
   }
 
-  .btn {
+  .btn,
+  .btn-primary,
+  .btn-secondary {
     text-align: center;
+    width: 100%;
   }
 
   .hero h1 {
