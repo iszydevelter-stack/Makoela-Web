@@ -111,11 +111,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-    const interestForm = document.getElementById("interestForm");
+     const interestForm = document.getElementById("interestForm");
 
   if (interestForm) {
     interestForm.addEventListener("submit", () => {
-      alert("Bedankt! Je aanvraag is verzonden.");
+      setTimeout(() => {
+        alert("Bedankt! Je aanvraag is verzonden.");
+      }, 300);
     });
   }
 });
