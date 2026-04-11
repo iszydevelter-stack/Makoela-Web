@@ -118,4 +118,4 @@ interestForm.addEventListener("submit", (event) => {
   );
 
   window.location.href = `mailto:iszydevelter@gmail.com?subject=${subject}&body=${body}`;
-});
+  });
