@@ -110,14 +110,32 @@ document.addEventListener("DOMContentLoaded", () => {
       closeArtistModal();
     }
   });
+const interestForm = document.getElementById("interestForm");
+const formStatus = document.getElementById("formStatus");
 
-     const interestForm = document.getElementById("interestForm");
+if (interestForm) {
+  interestForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  if (interestForm) {
-    interestForm.addEventListener("submit", () => {
-      setTimeout(() => {
-        alert("Bedankt! Je aanvraag is verzonden.");
-      }, 300);
-    });
+    const data = new FormData(interestForm);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xzdknrnr", {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+  interestForm.reset();
+  formStatus.style.display = "block";
+  formStatus.style.color = "green";
+  formStatus.textContent = "Bedankt! Je aanvraag is verzonden.";
+
+  const contactSection = document.getElementById("contact");
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
   }
-});
+}
