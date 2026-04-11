@@ -111,30 +111,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  const interestForm = document.getElementById("interestForm");
+    const interestForm = document.getElementById("interestForm");
 
   if (interestForm) {
-    interestForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const message = document.getElementById("message").value.trim();
-
-      console.log("FORM SUBMIT WERKT");
-
-      const subject = encodeURIComponent(`Inzending Steentje - ${name}`);
-      const body = encodeURIComponent(
-        `Naam: ${name}\nE-mail: ${email}\n\nKorte motivatie:\n${message}`
-      );
-
-      const mailtoLink = `mailto:iszydevelter@gmail.com?subject=${subject}&body=${body}`;
-
-      window.location.href = mailtoLink;
-
-      setTimeout(() => {
-        alert("Als er geen mailvenster opent, stuur je inzending rechtstreeks naar iszydevelter@gmail.com.");
-      }, 500);
+    interestForm.addEventListener("submit", () => {
+      alert("Bedankt! Je aanvraag is verzonden.");
     });
   }
 });
