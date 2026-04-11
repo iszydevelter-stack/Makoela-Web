@@ -102,10 +102,10 @@ document.addEventListener("keydown", (event) => {
     closeArtistModal();
   }
 });
-
 const interestForm = document.getElementById("interestForm");
 
-interestForm.addEventListener("submit", (event) => {
+if (interestForm) {
+  interestForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const name = document.getElementById("name").value.trim();
@@ -119,3 +119,4 @@ interestForm.addEventListener("submit", (event) => {
 
   window.location.href = `mailto:iszydevelter@gmail.com?subject=${subject}&body=${body}`;
   });
+}
