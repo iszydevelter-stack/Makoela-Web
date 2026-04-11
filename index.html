@@ -263,85 +263,51 @@
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <div class="container contact-box">
-        <div>
-          <p class="section-label">Open call</p>
-          <h2>Zin om deze zomer deel uit te maken van een creatief Stene Dorp?</h2>
-          <p>
-            We zoeken 9 creators die elk een weekend lang een eigen expo of
-            artistieke invulling willen neerzetten in een huiselijke ruimte.
-          </p>
-          <p>
-            Je krijgt de vrijheid om de ruimte naar jouw hand te zetten en een
-            eigen publiek te ontvangen. We zoeken makers met een duidelijke visie
-            en zin om iets neer te zetten.
-          </p>
-          <p>
-            Laat kort weten wie je bent, wat je maakt en hoe jij een weekend
-            zou invullen. De eerste ontmoeting vindt plaats op 24 april.
-          </p>
-          <p><strong>Inzendingen en vragen:</strong> <a href="mailto:iszydevelter@gmail.com">iszydevelter@gmail.com</a></p>
-          <p class="contact-name">Ismael Develter</p>
-        </div>
-        
-<form class="contact-form" id="interestForm" action="https://formspree.io/f/xzdknrnr" method="POST">
-  <input type="hidden" name="_next" value="https://iszydevelter-stack.github.io/Makoela-Web/#contact">
+  <section id="contact" class="section">
+  <div class="container contact-box">
 
-  <label for="name">Naam</label>
-  <input type="text" id="name" name="name" placeholder="Jouw naam" required />
+<div>
+  <p class="section-label">Open call</p>
+  <h2>Zin om deze zomer deel uit te maken van een creatief Stene Dorp?</h2>
+  <p>
+    We zoeken 9 creators die elk een weekend lang een eigen expo of
+    artistieke invulling willen neerzetten in een huiselijke ruimte.
+  </p>
+  <p>
+    Je krijgt de vrijheid om de ruimte naar jouw hand te zetten en een
+    eigen publiek te ontvangen. We zoeken makers met een duidelijke visie
+    en zin om iets neer te zetten.
+  </p>
+  <p>
+    Laat kort weten wie je bent, wat je maakt en hoe jij een weekend
+    zou invullen. De eerste ontmoeting vindt plaats op 24 april.
+  </p>
+  <p><strong>Inzendingen en vragen:</strong> <a href="mailto:iszydevelter@gmail.com">iszydevelter@gmail.com</a></p>
+  <p class="contact-name">Ismael Develter</p>
+</div>
 
-  <label for="email">E-mail</label>
-  <input type="email" id="email" name="email" placeholder="jij@email.com" required />
+    <!-- HIER je form -->
+    <form class="contact-form" id="interestForm">
+      <label for="name">Naam</label>
+      <input type="text" id="name" name="name" placeholder="Jouw naam" required />
 
-  <label for="message">Korte motivatie</label>
-  <textarea
-    id="message"
-    name="message"
-    rows="5"
-    placeholder="Vertel kort wie je bent, wat je maakt en hoe jij een weekend bij Steentje zou invullen."
-  ></textarea>
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="jij@email.com" required />
 
-  <button type="submit" class="btn btn-primary">Dien je aanvraag in</button>
-</form>
-      </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <p>Steentje · Oostende · Zomer 2026</p>
-  </footer>
+      <label for="message">Korte motivatie</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        placeholder="Vertel kort wie je bent, wat je maakt en hoe jij een weekend bij Steentje zou invullen."
+      ></textarea>
 
-  <div class="artist-modal" id="artistModal" aria-hidden="true">
-    <div class="artist-modal-backdrop"></div>
+      <button type="submit" class="btn btn-primary">Dien je aanvraag in</button>
 
-    <div class="artist-modal-content">
-      <button class="artist-modal-close" id="closeArtistModal" aria-label="Sluit venster">
-        ×
-      </button>
+      <p id="formStatus" style="display:none; color:green; margin-top:10px;">
+        Bedankt! Je aanvraag is verzonden.
+      </p>
+    </form>
 
-      <div class="artist-modal-grid">
-        <div class="artist-modal-text">
-          <p class="section-label">Themaweekend</p>
-          <h2 id="modalArtistName">Naam deelnemer</h2>
-          <p id="modalArtistDate" class="artist-date">12–13 juli 2026</p>
-          <p id="modalArtistTheme" class="artist-theme">Thema: Intieme Sporen</p>
-
-          <h3>Waarom Steentje?</h3>
-          <p id="modalArtistReason">
-            Hier komt de motivatie van de deelnemer: waarom deze persoon voor Steentje koos,
-            wat die wil tonen, en hoe die de ruimte wil gebruiken.
-          </p>
-        </div>
-
-        <div class="artist-modal-gallery" id="modalArtistGallery">
-          <img src="images/work-1.jpg" alt="Werk van de deelnemer" />
-          <img src="images/work-2.jpg" alt="Werk van de deelnemer" />
-          <img src="images/work-3.jpg" alt="Werk van de deelnemer" />
-        </div>
-      </div>
-    </div>
   </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+</section>
